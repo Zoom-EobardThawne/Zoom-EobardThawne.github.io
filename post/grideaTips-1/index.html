@@ -1,9 +1,8 @@
-<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>我的阅读 | 闲卧庭前远看帆</title>
+<title>【Gridea使用Tips】无法保存主题自定义设置 | 闲卧庭前远看帆</title>
 <meta name="description" content="欲买桂花同载酒，终不似，少年游" />
 <link rel="shortcut icon" href="https://Zoom-EobardThawne.github.io/favicon.ico">
 <link rel="stylesheet" href="https://Zoom-EobardThawne.github.io/styles/main.css">
@@ -16,13 +15,14 @@
 <script src="https://Zoom-EobardThawne.github.io/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://Zoom-EobardThawne.github.io/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css">
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.js'></script>
+    <meta name="description" content="Gridea——一个静态博客写作的客户端。
+在Gridea上进行写作，配合Github Pages或Coding Pages平台服务，就可以将自己的博客部署到网络上。
+本站也是通过这种方式搭建的，成本低、自由度高、可选的主题丰富，部署稍微麻..." />
+    <meta name="keywords" content="Gridea" />
+    <script src="https://Zoom-EobardThawne.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://Zoom-EobardThawne.github.io/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -83,14 +83,110 @@
         </div>
       </div>
 
-      <main id="friends" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://Zoom-EobardThawne.github.io/post-images/grideaTips-1.jpg');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-11-02"><i class="fa fa-calendar"></i><span class="lately">1 小时前</span></time>
+              
+              <a href="https://Zoom-EobardThawne.github.io/post/grideaTips-1/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/grideaTips-1/"> </span>
+              </a>
+              <span id="/grideaTips-1/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="https://Zoom-EobardThawne.github.io/tag/-XM3VOvuN/" class="ctag ctag-0 ctag--XM3VOvuN" aria-label="">Gridea</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">【Gridea使用Tips】无法保存主题自定义设置</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="section-content" style="margin-top:3em;"></div>
-        </div>
-        </div>
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p><em><u><a href="https://gridea.dev/"><strong>Gridea</strong></a>——一个静态博客写作的客户端。<br>
+在Gridea上进行写作，配合Github Pages或Coding Pages平台服务，就可以将自己的博客部署到网络上。<br>
+本站也是通过这种方式搭建的，成本低、自由度高、可选的主题丰富，部署稍微麻烦些，不如注册现成的博客网站来的快捷。但对于想要尝试搭建个人博客，缺乏编程经验的人来说是一个很好的选择。</u></em></p>
+<p>在使用过程中难免遇到一些问题，比如本文将提到的<strong>客户端无法保存主题自定义设置</strong>。</p>
+<p>今天想要给自己的博客添加评论功能，刚好选择的主题“<a href="https://github.com/lmm214/gridea-theme-breek/"><strong>Breek</strong></a>”中自带<a href="https://valine.js.org/"><strong>valine</strong></a>评论系统，只需要在设置中填入相关信息就可以添加valine评论到博客。填好相关信息之后，我发现点击保存按钮并无反应，重启客户端保存的设置消失了，尝试了多次之后并未找出原因。<br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1635861185701.png" alt="" loading="lazy"><br>
+最后只得手动修改客户端的配置文件，填入相关信息了。<br>
+具体步骤如下图：<br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1635861378518.png" alt="" loading="lazy"><br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1635861387948.png" alt="" loading="lazy"><br>
+通过这种方式，成功将信息添加到了客户端配置中，但是无法保存配置的原因仍然不明。可能是软件本身bug？或者是我使用的主题和设置有冲突？<br>
+天色太晚了，先到这里吧。</p>
+<hr>
+<p>往期推荐：<br>
+<a href="https://xn--yetp9bp76b6xdqv7b.top/post/Miru-Tights%20/">みるタイツ/Miru Tights </a><br>
+<a href="https://xn--yetp9bp76b6xdqv7b.top/post/dc-guan-ying/">DC观影</a></p>
+<hr>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://Zoom-EobardThawne.github.io/post-images/Miru-Tights .png');"></div>
+                 <a href="https://Zoom-EobardThawne.github.io/post/Miru-Tights /" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-11-01">2021-11-01</time>
+                  <h4 class="title white no-margin">《みるタイツ/Miru Tights 》——朦胧的色气</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://Zoom-EobardThawne.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
+          </div>
       </main>
-        <footer id="footer" class="grid-container">
+
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -240,15 +336,9 @@
 </script>
     
 
-    <script>
-    new Bmdb({
-      type: 'books',
-      selector: '.section-content',
-      secret: '',
-      noMoreText: '没有更多数据了',
-      limit: 30
-    })
-    </script>
+      
+    <script src="https://Zoom-EobardThawne.github.io/media/js/functions-post.js"></script>
+
     </div>
     <!-- end: #wrapper -->
   </body>
