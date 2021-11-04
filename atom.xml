@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Zoom-EobardThawne.github.io</id>
     <title>闲卧庭前远看帆</title>
-    <updated>2021-11-04T04:16:38.454Z</updated>
+    <updated>2021-11-04T04:25:18.087Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Zoom-EobardThawne.github.io"/>
     <link rel="self" href="https://Zoom-EobardThawne.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, 闲卧庭前远看帆</rights>
     <entry>
         <title type="html"><![CDATA[【每日科技】——app推荐]]></title>
-        <id>https://Zoom-EobardThawne.github.io/post/iDaily-app/</id>
-        <link href="https://Zoom-EobardThawne.github.io/post/iDaily-app/">
+        <id>https://Zoom-EobardThawne.github.io/iDaily-app/</id>
+        <link href="https://Zoom-EobardThawne.github.io/iDaily-app/">
         </link>
         <updated>2021-11-03T03:01:37.000Z</updated>
         <content type="html"><![CDATA[<p><em>「每日科技」（四叶新媒体）2011 年 12 月成立，旗下App众多，包括 iDaily·每日环球视野、倒数日、imoney、iMuseum·每日环球展览等。覆盖金融、媒体、艺术、效率、工具、天气、社交等多领域。</em></p>
@@ -56,8 +56,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[【Gridea使用Tips】无法保存主题自定义设置]]></title>
-        <id>https://Zoom-EobardThawne.github.io/post/grideaTips-1/</id>
-        <link href="https://Zoom-EobardThawne.github.io/post/grideaTips-1/">
+        <id>https://Zoom-EobardThawne.github.io/grideaTips-1/</id>
+        <link href="https://Zoom-EobardThawne.github.io/grideaTips-1/">
         </link>
         <updated>2021-11-02T13:23:34.000Z</updated>
         <content type="html"><![CDATA[<p><em><u><a href="https://gridea.dev/"><strong>Gridea</strong></a>——一个静态博客写作的客户端。<br>
@@ -85,8 +85,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[《みるタイツ/Miru Tights 》——朦胧的色气]]></title>
-        <id>https://Zoom-EobardThawne.github.io/post/Miru-Tights /</id>
-        <link href="https://Zoom-EobardThawne.github.io/post/Miru-Tights /">
+        <id>https://Zoom-EobardThawne.github.io/Miru-Tights /</id>
+        <link href="https://Zoom-EobardThawne.github.io/Miru-Tights /">
         </link>
         <updated>2021-11-01T11:10:28.000Z</updated>
         <content type="html"><![CDATA[<p><em>《裤袜视界》（みるタイツ / Miru Tights ）主要讲述了春天成为高二生的蓝川莲、文体兼优的中红由亚、开朗活泼的大小姐萌黄帆美三人的度过的一段“无可替代的时光”。</em></p>
@@ -135,8 +135,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[DC观影]]></title>
-        <id>https://Zoom-EobardThawne.github.io/post/dc-guan-ying/</id>
-        <link href="https://Zoom-EobardThawne.github.io/post/dc-guan-ying/">
+        <id>https://Zoom-EobardThawne.github.io/dc-guan-ying/</id>
+        <link href="https://Zoom-EobardThawne.github.io/dc-guan-ying/">
         </link>
         <updated>2021-11-01T09:07:04.000Z</updated>
         <content type="html"><![CDATA[<p><em>安利向！本文中提及的作品本人均完整观看过，根据个人喜好整理，排名不分先后。</em></p>
@@ -165,8 +165,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[ Arduino+ESP8266的远程控制小车]]></title>
-        <id>https://Zoom-EobardThawne.github.io/post/arduino-esp8266-car/</id>
-        <link href="https://Zoom-EobardThawne.github.io/post/arduino-esp8266-car/">
+        <id>https://Zoom-EobardThawne.github.io/arduino-esp8266-car/</id>
+        <link href="https://Zoom-EobardThawne.github.io/arduino-esp8266-car/">
         </link>
         <updated>2021-06-10T10:27:07.000Z</updated>
         <content type="html"><![CDATA[<h1 id="arduinoesp8266的远程控制小车">Arduino+ESP8266的远程控制小车</h1>
@@ -589,8 +589,8 @@ void loop() {
     </entry>
     <entry>
         <title type="html"><![CDATA[一个简单的自定义栈]]></title>
-        <id>https://Zoom-EobardThawne.github.io/post/zi-ding-yi-zhan/</id>
-        <link href="https://Zoom-EobardThawne.github.io/post/zi-ding-yi-zhan/">
+        <id>https://Zoom-EobardThawne.github.io/zi-ding-yi-zhan/</id>
+        <link href="https://Zoom-EobardThawne.github.io/zi-ding-yi-zhan/">
         </link>
         <updated>2021-05-13T17:12:04.000Z</updated>
         <content type="html"><![CDATA[<h2 id="自定义一个栈in-c">自定义一个栈（In C++）</h2>
@@ -777,8 +777,8 @@ template &lt;typename 类型参数&gt;
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome to 闲卧庭前远看帆的小窝]]></title>
-        <id>https://Zoom-EobardThawne.github.io/post/welcome/</id>
-        <link href="https://Zoom-EobardThawne.github.io/post/welcome/">
+        <id>https://Zoom-EobardThawne.github.io/welcome/</id>
+        <link href="https://Zoom-EobardThawne.github.io/welcome/">
         </link>
         <updated>2021-05-09T18:19:34.000Z</updated>
         <content type="html"><![CDATA[<p>🚀关于本站：生活记录，学习心得，影视分享。</p>

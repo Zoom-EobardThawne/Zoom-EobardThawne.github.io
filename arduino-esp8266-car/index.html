@@ -1,0 +1,762 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> Arduino+ESP8266的远程控制小车 | 闲卧庭前远看帆</title>
+<meta name="description" content="欲买桂花同载酒，终不似，少年游" />
+<link rel="shortcut icon" href="https://Zoom-EobardThawne.github.io/favicon.ico">
+<link rel="stylesheet" href="https://Zoom-EobardThawne.github.io/styles/main.css">
+
+<script src="https://Zoom-EobardThawne.github.io/media/js/jquery.min.js"></script>
+<script src="https://Zoom-EobardThawne.github.io/media/js/masonry.pkgd.min.js"></script>
+<script src="https://Zoom-EobardThawne.github.io/media/js/aos.js"></script>
+<script src="https://Zoom-EobardThawne.github.io/media/js/pace.min.js"></script>
+<script src="https://Zoom-EobardThawne.github.io/media/js/view-image.min.js"></script>
+<script src="https://Zoom-EobardThawne.github.io/media/js/jquery.magnific-popup.min.js"></script>
+<script src="https://Zoom-EobardThawne.github.io/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <meta name="description" content="Arduino+ESP8266的远程控制小车
+硬件选型
+小车主控板：Arduino UNO
+​		Aruduino平台于2005年诞生，两位就职于米兰设计学院的教授，希望开发一款具有软件开发功能的开源的硬件实验平台，于是在他们的合作下，Ar..." />
+    <meta name="keywords" content="Arduino" />
+    <script src="https://Zoom-EobardThawne.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://Zoom-EobardThawne.github.io/media/js/prism.min.js"></script>
+  </head>
+  <body>
+            <header id="header" class="grid-container">
+        <!-- start: .menu-wrapper -->
+        <div class="menu-mobile"> 
+          <i class="fa fa-reorder"></i>
+        </div>
+        <div class="menu-wrapper">
+          <div class="">
+            <div class="logo">
+              <a href="https://Zoom-EobardThawne.github.io"><img src="/media/images/custom-headerLogo.png" alt=""></a>
+            </div>
+            <!-- start: .main-nav -->
+
+            <nav class="main-nav grid-container grid-parent">
+              <ul id="menu-header" class="menu gradient-effect">
+                <li class=""><a href="https://Zoom-EobardThawne.github.io" class="menu">首页</a></li>
+                
+                  <li class="" >
+                    <a href="/archives" class="menu">
+                      归档
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/tags" class="menu">
+                      标签
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/post/welcome" class="menu">
+                      关于
+                    </a>
+                  </li>
+                
+                <li class="search-menu-item hide-on-mobile hide-on-tablet"><a href="#search-lightbox" class="lightbox mfp-inline"><i class="fa fa-search-line"></i></a></li>
+              </ul>
+            </nav>
+            <a href="#search-lightbox" class="lightbox epcl-search-button mfp-inline hide-on-tablet hide-on-desktop"><i class="fa fa-search-line"></i></a>
+            <!-- end: .main-nav -->
+            <div class="clear"></div>
+            <div class="border hide-on-tablet hide-on-mobile"></div>
+          </div>    
+          <div class="clear"></div>
+        </div>
+        <!-- end: .menu-wrapper -->
+        <div class="clear"></div>
+      </header>
+      <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
+        <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
+          <div class="search-wrapper section">
+            <form id="gridea-search-form" data-update="1635999592828" action="/search/index.html" class="search-form" _lpchecked="1">
+              <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
+              <button type="submit" class="submit" aria-label="Submit">
+                <i class="fa fa-search-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://Zoom-EobardThawne.github.io/post-images/arduino-esp8266-car.jpg');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-06-10"><i class="fa fa-calendar"></i><span class="lately">5 个月前</span></time>
+              
+              <a href="https://Zoom-EobardThawne.github.io/arduino-esp8266-car/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/arduino-esp8266-car/"> </span>
+              </a>
+              <span id="/arduino-esp8266-car/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="https://Zoom-EobardThawne.github.io/d8e9zXDCE8/" class="ctag ctag-0 ctag-d8e9zXDCE8" aria-label="">Arduino</a>
+                    
+              </div>
+              <h1 class="title ularge white bold"> Arduino+ESP8266的远程控制小车</h1>
+            </div>
+          </div>
+        </div>  
+
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <h1 id="arduinoesp8266的远程控制小车">Arduino+ESP8266的远程控制小车</h1>
+<h2 id="硬件选型">硬件选型</h2>
+<h3 id="小车主控板arduino-uno">小车主控板：Arduino UNO</h3>
+<p>​		Aruduino平台于2005年诞生，两位就职于米兰设计学院的教授，希望开发一款具有软件开发功能的开源的硬件实验平台，于是在他们的合作下，Arduino应运而生。Arduino的编程的语言脱胎于C，如果你有了C语言的学习经验的话，在了解了基本的语言特点和语法之后，便能够非常快速的在Arduino上进行独立的开发工作。关于Arduino的语言，主要有一下两部分，其一是setup()函数，该函数的作用只要在于对系统进行初始化，对相应的引脚进行定义，比如设置输入还是输出模式。第二部分是loop()函数，该函数是用来编写对应的功能的，同时loop()函数将启动硬件部分。不仅如此，Arduino拥有丰富的库文件，分为：官方提供和开发者自定义两种类型。</p>
+<p>​		正如上文提到的，Arduino同时兼具软件开发的功能，拥有着自己的软件开发环境——Arduino IDE。它最为显著的特点就是可以跨多个平台运行，极大方便了使用。目前支持的平台包括：Linux、Windows和MacOS等。Arduino IDE是针对Arduino开发板的一个集成开源的编译软件，操作界面简单、语言风格与C语言相近、使用的库文件是开源的并且简单的代码可以直接通过串口进行下载。对于使用Arduino的开发者来说，这是一款首选的开发环境。<br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1623321259204.png" alt="" loading="lazy"></p>
+<p>​		ArduinoIDE是基于processing IDE开发的，是初学者十分的友好，能够快速的掌握，并具有很高的灵活性。Arduino的语言对于avr-gcc库二次封装，因而不需要太多的单片机和编程基础，便可以进行快速的开发。它的工作流程为，在开发者编写好代码，编译后，将语言转换成C++，再用avr-gcc将编译语言转换成二进制，这样一来，开发者编写的内容才能够背Arduino的硬件识别，程序才能够运行。这串代码通过USB接口连接到电脑，再上传到Arduino的存储器进行存储。</p>
+<p>​		在开发者使用Arduino IDE的时候，要做好以下的准备工作：在PC端下载对应硬件的驱动，选择合适的端口。这些步骤完成之后，便可开始程序的编写。Arduino还有第三方的图形化编程软件，极大地降低了对开发者的编程能力的要求，只要能够符合逻辑的设计出功能，按照规定的方式设置对应的参数，便可以下载程序到硬件开发板进行使用。</p>
+<p><a href="https://www.arduino.cc/en/software">Arduino软件下载</a><br>
+<a href="https://www.arduino.cn/">Arduino中文社区</a></p>
+<p>​		小车选用的是Arduino UNO的开发板，搭载芯片为ATmega328p。</p>
+<figure data-type="image" tabindex="1"><img src="https://Zoom-EobardThawne.github.io/post-images/1623321351613.png" alt="" loading="lazy"></figure>
+<p>​		同时为了方便对控制小车其他配件，选用了一块配套的功能转接板，如下所示：</p>
+<figure data-type="image" tabindex="2"><img src="https://Zoom-EobardThawne.github.io/post-images/1623321379499.png" alt="" loading="lazy"></figure>
+<p>​</p>
+<h3 id="远程连接模块esp8266开发板">远程连接模块：ESP8266开发板</h3>
+<p>小车采用ESP-12E开发板（NoteMCU）作为WIFI连接的模块，通过该块开发板连接物联网云平台，实现远程的控制实现。<br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1623321413473.jpg" alt="" loading="lazy"></p>
+<h3 id="其他配件">其他配件</h3>
+<p>小车还需要的配件包括：四个直流电机，底盘，车轮，螺丝（若干），铜柱（若干），电池盒，可充电电池。</p>
+<h2 id="云平台选择点灯科技blinker">云平台选择——点灯科技（Blinker）</h2>
+<p><a href="https://www.diandeng.tech/home">官网首页</a></p>
+<p><a href="https://www.diandeng.tech/doc">开发文档</a></p>
+<h2 id="远程控制设计">远程控制设计</h2>
+<h3 id="小车控制">小车控制</h3>
+<p>远程控制功能主要分为两个主要部分，分别是对小车的动作控制和云平台连接。</p>
+<p>小车的行动通过控制电机的转速来实现，单片机的I/O口输出不同的信号，改变驱动电路中PWM的比例值，进而对电机的转速进行调控。将对应的电机状态用函数进行封装，配合不同指令调用对应的函数来实现对小车的控制。</p>
+<p>小车基本动作的函数如下表所示：</p>
+<p>​																						小车基本动作函数</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>run()</td>
+<td>小车向前进</td>
+<td>左右电机前进</td>
+</tr>
+<tr>
+<td>brake()</td>
+<td>小车停止</td>
+<td>左右电机停止</td>
+</tr>
+<tr>
+<td>left()</td>
+<td>小车左转</td>
+<td>右电机前进左电机停止</td>
+</tr>
+<tr>
+<td>right()</td>
+<td>小车右转</td>
+<td>右电机停止左电机前进</td>
+</tr>
+<tr>
+<td>back()</td>
+<td>小车后退</td>
+<td>左右电机反转</td>
+</tr>
+</tbody>
+</table>
+<h3 id="云平台连接">云平台连接</h3>
+<p>云平台远程连接采用ESP-12E开发板实现，首先通过ESP-12E板和物联网云平台（采用的是Blinker平台）进行远程连接，首先给开发板刷入Blinker的固件，当设备连接启动后，Arduino板通过串口向ESP-12E开发板发送AT指令，进行WIFI连接。连接成功后，就可以通过手机端向云平台发送指令，再由云平台发送给ESP-12E，Arduino通过串口读取指令，调用相应的动作函数。</p>
+<p>​																							AT指令字段说明</p>
+<table>
+<thead>
+<tr>
+<th>AT指令</th>
+<th>BLINKER_WIFI=0</th>
+<th>3275431b24545</th>
+<th>fa5</th>
+<th>bruce6545555</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>说明</td>
+<td>模块工作于透传模式</td>
+<td>绑定设备的密钥</td>
+<td>WIFI名称</td>
+<td>WIFI密码</td>
+</tr>
+</tbody>
+</table>
+<p>Bilnker云平台远程连接，主要分为新建组件、设置回调函数、绑定组件与回调函数三个步骤，主要的函数说明如下。</p>
+<p>​																						远程连接主要函数说明</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>功能</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BlinkerButton ButtonRun(&quot;btn-run&quot;);</td>
+<td>创建Button对象，键值为“btn-run”</td>
+<td>对应Blinker app上的按键控件</td>
+</tr>
+<tr>
+<td>void  buttonRun_callback(const String &amp; state)</td>
+<td>获取按键的状态</td>
+<td>根据按键的触发状态执行对应语句</td>
+</tr>
+<tr>
+<td>ButtonRun.attach(buttonRun_callback)</td>
+<td>绑定控件和对应的回调函数</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="源代码">源代码</h2>
+<h3 id="小车控制部分">小车控制部分</h3>
+<pre><code class="language-c">/***********************************************
+  前进  按下发出 ONA  
+  后退：按下发出 ONB  
+  左转：按下发出 ONC  
+  右转：按下发出 OND  
+  停止：按下发出 ONE  
+************************************************/
+int Left_motor=8;     //左电机(IN3) 输出0  前进   输出1 后退
+int Left_motor_pwm=9;     //左电机PWM调速
+
+int Right_motor=11;    //右电机(IN1)  输出0  前进   输出1 后退
+int Right_motor_pwm=10;    // 右电机PWM调速
+
+char buffer[18];		//串口缓冲区的字符数组
+void setup()			  //设定串口和引脚模式
+{
+     Serial.begin(9600);
+     Serial.flush();		//清空串口缓存
+     
+     Serial.println(&quot;AT+BLINKER_WIFI=0,3275431b255e,f55,bruce6545555&quot;);
+
+     pinMode(Left_motor,OUTPUT); // PIN 8 8脚无PWM功能
+     pinMode(Left_motor_pwm,OUTPUT); // PIN 9 (PWM)
+     pinMode(Right_motor_pwm,OUTPUT);// PIN 10 (PWM) 
+     pinMode(Right_motor,OUTPUT);// PIN 11 
+}
+void run()     // 前进
+{
+  digitalWrite(Right_motor,LOW);  // 右电机前进
+  digitalWrite(Right_motor_pwm,HIGH);  // 右电机前进     
+  analogWrite(Right_motor_pwm,90);//PWM比例0~255调速，左右轮差异略增减
+  
+  
+  digitalWrite(Left_motor,LOW);  // 左电机前进
+  digitalWrite(Left_motor_pwm,HIGH);  //左电机PWM     
+  analogWrite(Left_motor_pwm,90);//PWM比例0~255调速，左右轮差异略增减
+  //delay(time * 100);   //执行时间，可以调整  
+}
+
+void brake()         //刹车，停车
+{
+  
+  digitalWrite(Right_motor_pwm,LOW);  // 右电机PWM 调速输出0      
+  analogWrite(Right_motor_pwm,0);//PWM比例0~255调速，左右轮差异略增减
+
+  digitalWrite(Left_motor_pwm,LOW);  //左电机PWM 调速输出0          
+  analogWrite(Left_motor_pwm,0);//PWM比例0~255调速，左右轮差异略增减
+  //delay(time * 100);//执行时间，可以调整  
+}
+
+void left()         //左转(左轮不动，右轮前进)
+{
+   digitalWrite(Right_motor,LOW);  // 右电机前进
+  digitalWrite(Right_motor_pwm,HIGH);  // 右电机前进     
+  analogWrite(Right_motor_pwm,110);//PWM比例0~255调速，左右轮差异略增减
+  
+  
+  digitalWrite(Left_motor,LOW);  // 左电机前进
+  digitalWrite(Left_motor_pwm,LOW);  //左电机PWM     
+  analogWrite(Left_motor_pwm,0);//PWM比例0~255调速，左右轮差异略增减
+  //delay(time * 100);	//执行时间，可以调整  
+}
+
+void spin_left()         //左转(左轮后退，右轮前进)
+{
+  digitalWrite(Right_motor,LOW);  // 右电机前进
+  digitalWrite(Right_motor_pwm,HIGH);  // 右电机前进     
+  analogWrite(Right_motor_pwm,90);//PWM比例0~255调速，左右轮差异略增减
+  
+  digitalWrite(Left_motor,HIGH);  // 左电机后退
+  digitalWrite(Left_motor_pwm,HIGH);  //左电机PWM     
+  analogWrite(Left_motor_pwm,90);//PWM比例0~255调速，左右轮差异略增减
+  //delay(time * 100);	//执行时间，可以调整  
+}
+
+void right()        //右转(右轮不动，左轮前进)
+{
+   digitalWrite(Right_motor,LOW);  // 右电机不转
+  digitalWrite(Right_motor_pwm,LOW);  // 右电机PWM输出0     
+  analogWrite(Right_motor_pwm,0);//PWM比例0~255调速，左右轮差异略增减
+  
+  
+  digitalWrite(Left_motor,LOW);  // 左电机前进
+  digitalWrite(Left_motor_pwm,HIGH);  //左电机PWM     
+  analogWrite(Left_motor_pwm,110);//PWM比例0~255调速，左右轮差异略增减
+  //delay(time * 100);	//执行时间，可以调整  
+}
+
+void spin_right()        //右转(右轮后退，左轮前进)
+{
+  digitalWrite(Right_motor,HIGH);  // 右电机后退
+  digitalWrite(Right_motor_pwm,HIGH);  // 右电机PWM输出1     
+  analogWrite(Right_motor_pwm,50);//PWM比例0~255调速，左右轮差异略增减
+  
+  
+  digitalWrite(Left_motor,LOW);  // 左电机前进
+  digitalWrite(Left_motor_pwm,HIGH);  //左电机PWM     
+  analogWrite(Left_motor_pwm,50);//PWM比例0~255调速，左右轮差异略增减
+  //delay(time * 100);	//执行时间，可以调整    
+}
+
+void back()          //后退
+{
+  digitalWrite(Right_motor,HIGH);  // 右电机后退
+  digitalWrite(Right_motor_pwm,HIGH);  // 右电机前进     
+  analogWrite(Right_motor_pwm,90);//PWM比例0~255调速，左右轮差异略增减
+  
+  
+  digitalWrite(Left_motor,HIGH);  // 左电机后退
+  digitalWrite(Left_motor_pwm,HIGH);  //左电机PWM     
+  analogWrite(Left_motor_pwm,90);//PWM比例0~255调速，左右轮差异略增减
+  //delay(time * 100);   //执行时间，可以调整    
+}
+
+void loop()
+{
+    if(Serial.available() &gt; 0)			//Serial.available()返回串口收到的字节数
+    {
+       int index = 0;
+       delay(100);				//延时等待串口收完数据，否则刚收到1个字节时就会执行后续程序
+       int numChar = Serial.available();	
+       if(numChar &gt; 15)				//确认数据不会溢出，应当小于缓冲大小
+       {
+         numChar = 15;
+        }
+       while(numChar--)
+      {
+          buffer[index++] = Serial.read();	//将串口数据一字一字的存入缓冲
+      }
+      Serial.println(buffer);
+      splitString(buffer);				//字符串分割
+    }
+    
+}
+
+void splitString(char *data)
+{
+       Serial.print(&quot;Data entered:&quot;);
+       Serial.println(data);
+       char *parameter;
+       parameter = strtok(data, &quot; ,&quot;);		//string token，将data按照空格或者,进行分割并截取
+       Serial.println(parameter);
+    while(parameter != NULL)
+  {
+    setMove(parameter);
+    parameter = strtok(NULL, &quot; ,&quot;);		//string token，再次分割并截取，直至截取后的字符为空
+    Serial.println(parameter);			
+   }
+   for(int x = 0; x &lt; 16; x++)			//清空缓冲
+  {
+   buffer[x] = '\0';
+  }
+     Serial.flush();
+}
+
+void setMove(char *data)
+{
+   if((data[0] == 'O') &amp;&amp; (data[1] == 'N')&amp;&amp; (data[2] == 'A'))
+   {
+    Serial.println(&quot;go forward!&quot;); 
+      run();
+  }
+  if((data[0] == 'O') &amp;&amp; (data[1] == 'N')&amp;&amp; (data[2] == 'B'))
+   {
+    Serial.println(&quot;go back!&quot;); 
+      back(); 
+ }
+    if((data[0] == 'O') &amp;&amp; (data[1] == 'N')&amp;&amp; (data[2] == 'C'))
+   {
+      Serial.println(&quot;go left!&quot;); 
+      left();
+  }
+    if((data[0] == 'O') &amp;&amp; (data[1] == 'N')&amp;&amp; (data[2] == 'D'))
+   {
+     Serial.println(&quot;go right!&quot;); 
+      right(); 
+  }
+    if((data[0] == 'O') &amp;&amp; (data[1] == 'N')&amp;&amp; (data[2] == 'E'))
+   {
+      Serial.println(&quot;Stop!&quot;); 
+      brake(); 
+  }
+    if((data[0] == 'O') &amp;&amp; (data[1] == 'N')&amp;&amp; (data[2] == 'F'))
+   {
+    Serial.println(&quot;Stop!&quot;); 
+     brake();  
+   }
+   
+}
+</code></pre>
+<h3 id="远程连接部分烧制在esp-12e开发板">远程连接部分（烧制在ESP-12E开发板）</h3>
+<pre><code class="language-c">#define BLINKER_AT_MQTT
+#include &lt;Blinker.h&gt;
+
+// 新建组件对象
+BlinkerButton ButtonRun(&quot;btn-run&quot;);
+BlinkerButton ButtonBack(&quot;btn-back&quot;);
+BlinkerButton ButtonLeft(&quot;btn-left&quot;);
+BlinkerButton ButtonRight(&quot;btn-right&quot;);
+BlinkerButton ButtonStop(&quot;btn-stop&quot;);
+BlinkerButton ButtonOn(&quot;btn-on&quot;);
+BlinkerButton ButtonOff(&quot;btn-off&quot;);
+int counter = 0;
+
+// 按键回调函数
+void buttonRun_callback(const String &amp; state)
+{
+  if (state == BLINKER_CMD_BUTTON_PRESSED){
+     Serial.write(&quot;ONA&quot;);
+  }
+  else if (state == BLINKER_CMD_BUTTON_RELEASED){
+     Serial.write(&quot;ONE&quot;);
+  }
+  else{
+      Serial.write(&quot;ONA&quot;);
+      delay(1000);
+      Serial.write(&quot;ONE&quot;); 
+  }
+}
+void buttonBack_callback(const String &amp; state)
+{
+   if (state == BLINKER_CMD_BUTTON_PRESSED){
+     Serial.write(&quot;ONB&quot;);
+  }
+  else if (state == BLINKER_CMD_BUTTON_RELEASED){
+     Serial.write(&quot;ONE&quot;);
+  }
+  else{
+      Serial.write(&quot;ONB&quot;);
+      delay(1000);
+      Serial.write(&quot;ONE&quot;); 
+  }
+}
+void buttonLeft_callback(const String &amp; state)
+{
+   if (state == BLINKER_CMD_BUTTON_PRESSED){
+     Serial.write(&quot;ONC&quot;);
+  }
+  else if (state == BLINKER_CMD_BUTTON_RELEASED){
+     Serial.write(&quot;ONE&quot;);
+  }
+  else{
+      Serial.write(&quot;ONC&quot;);
+      delay(1000);
+      Serial.write(&quot;ONE&quot;); 
+  }
+}
+void buttonRight_callback(const String &amp; state)
+{
+    if (state == BLINKER_CMD_BUTTON_PRESSED){
+     Serial.write(&quot;OND&quot;);
+  }
+  else if (state == BLINKER_CMD_BUTTON_RELEASED){
+     Serial.write(&quot;ONE&quot;);
+  }
+  else{
+      Serial.write(&quot;OND&quot;);
+      delay(1000);
+      Serial.write(&quot;ONE&quot;); 
+  }
+}
+void buttonStop_callback(const String &amp; state)
+{
+   Serial.write(&quot;ONE&quot;);
+}
+void buttonOn_callback(const String &amp; state)
+{
+   digitalWrite(2,LOW);
+   Serial.write(&quot;ONF&quot;);
+}
+void buttonOff_callback(const String &amp; state)
+{
+   digitalWrite(2,HIGH);
+}
+void setup()
+{
+    Blinker.begin();
+
+    pinMode(2,OUTPUT);
+    
+    ButtonRun.attach(buttonRun_callback);
+    ButtonBack.attach(buttonBack_callback);
+    ButtonLeft.attach(buttonLeft_callback);
+    ButtonRight.attach(buttonRight_callback);
+    ButtonStop.attach(buttonStop_callback);
+
+    ButtonOn.attach(buttonOn_callback);
+    ButtonOff.attach(buttonOff_callback);
+    
+}
+
+void loop() {
+ // char ch=Serial.read(); // 读取输入的信息
+ //Serial.print(ch);  //输出信息
+ //delay(1000); 
+    Blinker.run();
+}
+</code></pre>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://Zoom-EobardThawne.github.io/post-images/dc-guan-ying.jpg');"></div>
+                 <a href="https://Zoom-EobardThawne.github.io/dc-guan-ying/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-11-01">2021-11-01</time>
+                  <h4 class="title white no-margin">DC观影</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://Zoom-EobardThawne.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://Zoom-EobardThawne.github.io/post-images/zi-ding-yi-zhan.JPG');"></div>
+                 <a href="https://Zoom-EobardThawne.github.io/zi-ding-yi-zhan/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-05-14">2021-05-14</time>
+                  <h4 class="title white no-margin">一个简单的自定义栈</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://Zoom-EobardThawne.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
+          </div>
+      </main>
+
+          <footer id="footer" class="grid-container">
+        <div class="widgets row gradient-effect">
+            <div class="default-sidebar border-effect">
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_epcl_posts_thumbs underline-effect">
+                  <h4 class="widget-title title white bordered">最新文章</h4>
+                  
+                  
+                  <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://Zoom-EobardThawne.github.io/iDaily-app/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://Zoom-EobardThawne.github.io/post-images/iDaily-app.png');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-11-03">2021-11-03</time>
+                      <h4 class="title usmall">
+                        <a href="https://Zoom-EobardThawne.github.io/iDaily-app/">【每日科技】——app推荐</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://Zoom-EobardThawne.github.io/grideaTips-1/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://Zoom-EobardThawne.github.io/post-images/grideaTips-1.jpg');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-11-02">2021-11-02</time>
+                      <h4 class="title usmall">
+                        <a href="https://Zoom-EobardThawne.github.io/grideaTips-1/">【Gridea使用Tips】无法保存主题自定义设置</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://Zoom-EobardThawne.github.io/Miru-Tights /" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://Zoom-EobardThawne.github.io/post-images/Miru-Tights .png');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-11-01">2021-11-01</time>
+                      <h4 class="title usmall">
+                        <a href="https://Zoom-EobardThawne.github.io/Miru-Tights /">《みるタイツ/Miru Tights 》——朦胧的色气</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_tag_cloud underline-effect">
+                  <h4 class="widget-title title white bordered">标签云</h4>
+                  <div class="tagcloud">
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/-XM3VOvuN/" class="ctag ctag-0 ctag--XM3VOvuN" aria-label="">Gridea</a>
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/pqgxC5QPe/" class="ctag ctag-1 ctag-pqgxC5QPe" aria-label="">二次元</a>
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/b-ISFgfgyE/" class="ctag ctag-2 ctag-b-ISFgfgyE" aria-label="">观影指南</a>
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/ZBAtEx3CiL/" class="ctag ctag-3 ctag-ZBAtEx3CiL" aria-label="">DC</a>
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/d8e9zXDCE8/" class="ctag ctag-4 ctag-d8e9zXDCE8" aria-label="">Arduino</a>
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/C-FLr0EW0c/" class="ctag ctag-5 ctag-C-FLr0EW0c" aria-label="">数据结构</a>
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/yuBJ-4iL5E/" class="ctag ctag-6 ctag-yuBJ-4iL5E" aria-label="">C++</a>
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/fq9aRpLUM/" class="ctag ctag-7 ctag-fq9aRpLUM" aria-label="">About Me</a>
+                    
+                  </div>
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
+                  <h4 class="widget-title title white bordered">关于我</h4>
+                  <div class="avatar">
+                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://Zoom-EobardThawne.github.io/images/avatar.png);"></span></a>
+                  </div>
+                  <div class="info">
+                    <h4 class="title small author-name gradient-effect no-margin"><a href="">闲卧庭前远看帆</a></h4>
+                    <p class="founder">欲买桂花同载酒，终不似，少年游</p>
+                    <div class="social">
+                      
+                          
+                            <a href="https://github.com/Zoom-EobardThawne" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </div> 
+                  </div>
+                  <div class="clear"></div>
+                  </section>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="logo">
+          <a href="https://Zoom-EobardThawne.github.io"><img src="/media/images/custom-footerLogo.jpg" alt=""></a>
+        </div>
+        <p class="published border-effect">
+          ©2019 共 7 篇文章
+          <br/>
+          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+<script>
+    new Valine({
+        el: '#comments',
+        appId: 'yUHJNUdO3MjiUxbzLISJqu8V-gzGzoHsz' ,
+        appKey: 'wuvcPoOr9LIsXB8Ky4kMFYXT',
+        pageSize: 30,
+        placeholder: '既然来了，那就留个痕迹吧~',
+        visitor: true // 阅读量统计
+    })
+</script>
+    
+
+      
+    <script src="https://Zoom-EobardThawne.github.io/media/js/functions-post.js"></script>
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>
