@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Zoom-EobardThawne.github.io</id>
     <title>闲卧庭前远看帆</title>
-    <updated>2021-11-04T03:50:44.394Z</updated>
+    <updated>2021-11-04T04:16:11.947Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Zoom-EobardThawne.github.io"/>
     <link rel="self" href="https://Zoom-EobardThawne.github.io/atom.xml"/>
@@ -72,6 +72,10 @@
 <img src="https://Zoom-EobardThawne.github.io/post-images/1635861387948.png" alt="" loading="lazy"><br>
 通过这种方式，成功将信息添加到了客户端配置中，但是无法保存配置的原因仍然不明。可能是软件本身bug？或者是我使用的主题和设置有冲突？<br>
 天色太晚了，先到这里吧。</p>
+<p><em><strong>11.04更新</strong></em><br>
+在“theme.json”文件中把图片路径的所有&quot;\&quot;改成&quot;/&quot;,保存文件，重新启动客户端。这时，自定义设置就可以保存了。<br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1635999243199.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://Zoom-EobardThawne.github.io/post-images/1635999321784.png" alt="" loading="lazy"></figure>
 <hr>
 <p>往期推荐：<br>
 <a href="https://xn--yetp9bp76b6xdqv7b.top/post/Miru-Tights%20/">みるタイツ/Miru Tights </a><br>
