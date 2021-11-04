@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Zoom-EobardThawne.github.io</id>
     <title>闲卧庭前远看帆</title>
-    <updated>2021-11-04T08:57:13.599Z</updated>
+    <updated>2021-11-04T09:50:33.150Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Zoom-EobardThawne.github.io"/>
     <link rel="self" href="https://Zoom-EobardThawne.github.io/atom.xml"/>
@@ -10,6 +10,42 @@
     <logo>https://Zoom-EobardThawne.github.io/images/avatar.png</logo>
     <icon>https://Zoom-EobardThawne.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 闲卧庭前远看帆</rights>
+    <entry>
+        <title type="html"><![CDATA[【Gridea使用Tips】『Breek』主题内的valine评论系统]]></title>
+        <id>https://Zoom-EobardThawne.github.io/grideaTips-2/</id>
+        <link href="https://Zoom-EobardThawne.github.io/grideaTips-2/">
+        </link>
+        <updated>2021-11-04T06:43:48.000Z</updated>
+        <content type="html"><![CDATA[<p>之前使用Breek主题，成功搭建好了个人博客，在添加评论系统的时候遇到了一些问题，经过摸索之后都已解决，在这里将相关问题进行汇总。</p>
+<h2 id="valine"><a href="https://valine.js.org/">valine</a> —— 快速、简洁且高效的无后端评论系统</h2>
+<h3 id="1-preparation准备工作"><strong>1、Preparation——准备工作</strong></h3>
+<p>valine只是一个程序壳，它的使用需要依赖<a href="https://www.leancloud.cn/">LeanCloud</a>账户<br>
+首先需要注册一个LeanCloud账户，在控制台创建应用，获取AppID和AppKey，之后使用这两个凭证创建valine评论系统。<br>
+以上操作的具体步骤，请点击：<a href="https://valine.js.org/quickstart.html">快速开始</a>进行查看。</p>
+<p><em><u><strong>请注意本人使用的Breek主题自带了valine评论，其他主题可能不支持valine。</strong></u></em></p>
+<p>在完成上述的准备工作之后，我们已经获取了AppID和AppKey，将这两项信息，添加到Gridea客户端主题自定义的Valine评论设置中，点击保存。如有需要可以选择开启阅读量统计。<br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636010331060.png" alt="" loading="lazy"></p>
+<h3 id="2-test测试功能"><strong>2、Test——测试功能</strong></h3>
+<p>完成上述步骤之后，在Gridea客户端点击”预览“，网页渲染完成，在文章末尾就应出现valine评论系统了。如果，没有评论系统，检查之前的步骤是否正确，多尝试几次。<br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636011013060.png" alt="" loading="lazy"></p>
+<p>输入昵称、邮箱和网址可以不填写，这样评论人信息都将是默认值。确认评论功能无误后，在Gridea客户端进行同步。</p>
+<h3 id="3-problems-solutions问题和解答"><strong>3、Problems &amp; Solutions——问题和解答</strong></h3>
+<p><strong>Case1：开启了阅读量统计，发送了评论，但是文章封面的阅读量和评论数始终显示为零</strong><br>
+<strong>Solution</strong>：<em>在Gridea客户端的主题基础设置中，将文章URL路径设置为精简，这样阅读量和评论数就能正常显示了。此外，显示数据如果不更新也有可能是LeanCloud连接超时，尝试多刷新几次页面。</em><br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636012169775.png" alt="" loading="lazy"></p>
+<p><strong>Case2：首页文章封面的发布日期，默认为相对日期，需要手动同步才能更新（始终显示为XX天前）</strong><br>
+<strong>Solution</strong>：<em>由于是静态页面，不会实时刷新日期数据。可以修改文章日期的显示格式，将相对日期改成具体发布日期。<br>
+找到下图的两个文件，点击修改。<br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636013566620.png" alt="" loading="lazy"><br>
+找到time标签位置按图中所示，修改代码。<br>
+原来相对日期代码<br>
+<code>&lt;%= site.utils.moment(post.date).locale('zh-cn').fromNow() %&gt;</code><br>
+改为具体日期代码<br>
+<code>&lt;%= post.dateFormat %&gt;</code><br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636013582807.png" alt="" loading="lazy"><br>
+点击保存。</em></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【每日科技】——app推荐]]></title>
         <id>https://Zoom-EobardThawne.github.io/iDaily-app/</id>
