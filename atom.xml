@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Zoom-EobardThawne.github.io</id>
     <title>闲卧庭前远看帆</title>
-    <updated>2021-11-04T18:27:51.451Z</updated>
+    <updated>2021-11-04T19:09:06.869Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Zoom-EobardThawne.github.io"/>
     <link rel="self" href="https://Zoom-EobardThawne.github.io/atom.xml"/>
@@ -29,9 +29,9 @@ Prism 。<a href="http://prismjs.com/download.html">官网下载地址</a>Prism 
         <link href="https://Zoom-EobardThawne.github.io/grideaTips-2/">
         </link>
         <updated>2021-11-04T06:43:48.000Z</updated>
-        <summary type="html"><![CDATA[<p>之前使用Breek主题，成功搭建好了个人博客，在添加评论系统的时候遇到了一些问题，经过摸索之后都已解决，在这里将相关问题进行汇总。</p>
+        <summary type="html"><![CDATA[<p><u><em>之前使用Breek主题，成功搭建好了个人博客，在添加评论系统的时候遇到了一些问题，经过摸索之后都已解决，在这里将相关问题进行汇总。</em></u></p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>之前使用Breek主题，成功搭建好了个人博客，在添加评论系统的时候遇到了一些问题，经过摸索之后都已解决，在这里将相关问题进行汇总。</p>
+        <content type="html"><![CDATA[<p><u><em>之前使用Breek主题，成功搭建好了个人博客，在添加评论系统的时候遇到了一些问题，经过摸索之后都已解决，在这里将相关问题进行汇总。</em></u></p>
 ]]></content>
     </entry>
     <entry>
@@ -40,9 +40,9 @@ Prism 。<a href="http://prismjs.com/download.html">官网下载地址</a>Prism 
         <link href="https://Zoom-EobardThawne.github.io/iDaily-app/">
         </link>
         <updated>2021-11-03T03:01:37.000Z</updated>
-        <summary type="html"><![CDATA[<p><em>「每日科技」（四叶新媒体）2011 年 12 月成立，旗下App众多，包括 iDaily·每日环球视野、倒数日、imoney、iMuseum·每日环球展览等。覆盖金融、媒体、艺术、效率、工具、天气、社交等多领域。</em></p>
+        <summary type="html"><![CDATA[<p><u><em>「每日科技」（四叶新媒体）2011 年 12 月成立，旗下App众多，包括 iDaily·每日环球视野、倒数日、imoney、iMuseum·每日环球展览等。覆盖金融、媒体、艺术、效率、工具、天气、社交等多领域。</em></u></p>
 ]]></summary>
-        <content type="html"><![CDATA[<p><em>「每日科技」（四叶新媒体）2011 年 12 月成立，旗下App众多，包括 iDaily·每日环球视野、倒数日、imoney、iMuseum·每日环球展览等。覆盖金融、媒体、艺术、效率、工具、天气、社交等多领域。</em></p>
+        <content type="html"><![CDATA[<p><u><em>「每日科技」（四叶新媒体）2011 年 12 月成立，旗下App众多，包括 iDaily·每日环球视野、倒数日、imoney、iMuseum·每日环球展览等。覆盖金融、媒体、艺术、效率、工具、天气、社交等多领域。</em></u></p>
 ]]></content>
     </entry>
     <entry>
@@ -64,14 +64,14 @@ Prism 。<a href="http://prismjs.com/download.html">官网下载地址</a>Prism 
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[DC观影]]></title>
+        <title type="html"><![CDATA[DC观影（长期更新）]]></title>
         <id>https://Zoom-EobardThawne.github.io/dc-guan-ying/</id>
         <link href="https://Zoom-EobardThawne.github.io/dc-guan-ying/">
         </link>
         <updated>2021-11-01T09:07:04.000Z</updated>
-        <summary type="html"><![CDATA[<p><em>安利向！本文中提及的作品本人均完整观看过，根据个人喜好整理，排名不分先后。</em></p>
+        <summary type="html"><![CDATA[<p><u><em>安利向！DC系列的影视作品推荐！包括动画、电影、电视剧。下文提及的作品本人均观看过，根据个人喜好整理，排名不分先后。</em></u></p>
 ]]></summary>
-        <content type="html"><![CDATA[<p><em>安利向！本文中提及的作品本人均完整观看过，根据个人喜好整理，排名不分先后。</em></p>
+        <content type="html"><![CDATA[<p><u><em>安利向！DC系列的影视作品推荐！包括动画、电影、电视剧。下文提及的作品本人均观看过，根据个人喜好整理，排名不分先后。</em></u></p>
 ]]></content>
     </entry>
     <entry>
@@ -80,6 +80,12 @@ Prism 。<a href="http://prismjs.com/download.html">官网下载地址</a>Prism 
         <link href="https://Zoom-EobardThawne.github.io/arduino-esp8266-car/">
         </link>
         <updated>2021-06-10T10:27:07.000Z</updated>
+        <summary type="html"><![CDATA[<p><u><em>简单介绍如何利用Arduino单片和ESP8266开发板，结合物联网云平台，制作一款能远程遥控的小车。<br>
+KeyWords：单片机控制、WiFi、远程遥控、手机App</em></u></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><u><em>简单介绍如何利用Arduino单片和ESP8266开发板，结合物联网云平台，制作一款能远程遥控的小车。<br>
+KeyWords：单片机控制、WiFi、远程遥控、手机App</em></u></p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[一个简单的自定义栈]]></title>
