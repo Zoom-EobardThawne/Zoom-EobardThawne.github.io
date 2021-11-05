@@ -44,13 +44,13 @@ valine..." />
                 
                   <li class="" >
                     <a href="/movies" class="menu">
-                      影集
+                      观影
                     </a>
                   </li>
                 
                   <li class="" >
                     <a href="/books" class="menu">
-                      书单
+                      阅读
                     </a>
                   </li>
                 
@@ -61,8 +61,20 @@ valine..." />
                   </li>
                 
                   <li class="" >
+                    <a href="/tags" class="menu">
+                      标签
+                    </a>
+                  </li>
+                
+                  <li class="" >
                     <a href="/friends" class="menu">
                       友链
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/welcome" class="menu">
+                      关于
                     </a>
                   </li>
                 
@@ -82,7 +94,7 @@ valine..." />
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1636051979834" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1636088154803" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -130,26 +142,26 @@ valine..." />
 以上操作的具体步骤，请点击：<a href="https://valine.js.org/quickstart.html">快速开始</a>进行查看。</p>
 <p><em><u><strong>请注意本人使用的Breek主题自带了valine评论，其他主题可能不支持valine。</strong></u></em></p>
 <p>在完成上述的准备工作之后，我们已经获取了AppID和AppKey，将这两项信息，添加到Gridea客户端主题自定义的Valine评论设置中，点击保存。如有需要可以选择开启阅读量统计。<br>
-<img src="https://Zoom-EobardThawne.github.io/post-images/1636010331060.png" alt="" loading="lazy"></p>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636010331060.png" style="zoom:25%;" /></p>
 <h3 id="2-test测试功能"><strong>2、Test——测试功能</strong></h3>
 <p>完成上述步骤之后，在Gridea客户端点击”预览“，网页渲染完成，在文章末尾就应出现valine评论系统了。如果，没有评论系统，检查之前的步骤是否正确，多尝试几次。<br>
-<img src="https://Zoom-EobardThawne.github.io/post-images/1636011013060.png" alt="" loading="lazy"></p>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636011013060.png" style="zoom: 25%;" /></p>
 <p>输入昵称、邮箱和网址可以不填写，这样评论人信息都将是默认值。确认评论功能无误后，在Gridea客户端进行同步。</p>
 <h3 id="3-problems-solutions问题和解答"><strong>3、Problems &amp; Solutions——问题和解答</strong></h3>
 <p><strong>Case1：开启了阅读量统计，发送了评论，但是文章封面的阅读量和评论数始终显示为零</strong><br>
 <strong>Solution</strong>：<em>在Gridea客户端的主题基础设置中，将文章URL路径设置为精简，这样阅读量和评论数就能正常显示了。此外，显示数据如果不更新也有可能是LeanCloud连接超时，尝试多刷新几次页面。</em><br>
-<img src="https://Zoom-EobardThawne.github.io/post-images/1636012169775.png" alt="" loading="lazy"></p>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636012169775.png" style="zoom:25%;" /></p>
 <p><strong>Case2：首页文章封面的发布日期，默认为相对日期，需要手动同步才能更新（始终显示为XX天前）</strong><br>
-<strong>Solution</strong>：<em>由于是静态页面，不会实时刷新日期数据。可以修改文章日期的显示格式，将相对日期改成具体发布日期。<br>
-找到下图的两个文件，点击修改。<br>
-<img src="https://Zoom-EobardThawne.github.io/post-images/1636013566620.png" alt="" loading="lazy"><br>
-找到</em><strong>所有的</strong>time标签位置按图中所示，修改代码。<br>
-原来相对日期代码<br>
+<strong>Solution</strong>：<em>由于是静态页面，不会实时刷新日期数据。可以修改文章日期的显示格式，将相对日期改成具体发布日期。</em><br>
+<em>找到下图的两个文件，点击修改。</em><br>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636013566620.png" style="zoom:25%;" /><br>
+<em>找到</em><strong>所有的</strong>time标签位置按图中所示，修改代码。*<br>
+<em>原来相对日期代码</em><br>
 <code>&lt;%= site.utils.moment(post.date).locale('zh-cn').fromNow() %&gt;</code><br>
-改为具体日期代码<br>
+<em>改为具体日期代码</em><br>
 <code>&lt;%= post.dateFormat %&gt;</code><br>
-<img src="https://Zoom-EobardThawne.github.io/post-images/1636013582807.png" alt="" loading="lazy"><br>
-点击保存。*</p>
+<img src="https://Zoom-EobardThawne.github.io/post-images/1636013582807.png" style="zoom:25%;" /><br>
+<em>点击保存。</em></p>
 
                 </div>
                 <div class="clear"></div>
@@ -295,23 +307,17 @@ jQuery(document).ready(function($){
                     
                       <a href="https://Zoom-EobardThawne.github.io/tag/-XM3VOvuN/" class="ctag ctag-0 ctag--XM3VOvuN" aria-label="">Gridea</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/tTAdURUL5/" class="ctag ctag-1 ctag-tTAdURUL5" aria-label="">App</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/FqMqeaWtO/" class="ctag ctag-1 ctag-FqMqeaWtO" aria-label="">好物推荐</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/FqMqeaWtO/" class="ctag ctag-2 ctag-FqMqeaWtO" aria-label="">好物推荐</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/pqgxC5QPe/" class="ctag ctag-2 ctag-pqgxC5QPe" aria-label="">二次元</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/pqgxC5QPe/" class="ctag ctag-3 ctag-pqgxC5QPe" aria-label="">二次元</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/ZBAtEx3CiL/" class="ctag ctag-3 ctag-ZBAtEx3CiL" aria-label="">DC</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/b-ISFgfgyE/" class="ctag ctag-4 ctag-b-ISFgfgyE" aria-label="">观影指南</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/d8e9zXDCE8/" class="ctag ctag-4 ctag-d8e9zXDCE8" aria-label="">Arduino</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/ZBAtEx3CiL/" class="ctag ctag-5 ctag-ZBAtEx3CiL" aria-label="">DC</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/C-FLr0EW0c/" class="ctag ctag-5 ctag-C-FLr0EW0c" aria-label="">数据结构</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/d8e9zXDCE8/" class="ctag ctag-6 ctag-d8e9zXDCE8" aria-label="">Arduino</a>
-                    
-                      <a href="https://Zoom-EobardThawne.github.io/tag/C-FLr0EW0c/" class="ctag ctag-7 ctag-C-FLr0EW0c" aria-label="">数据结构</a>
-                    
-                      <a href="https://Zoom-EobardThawne.github.io/tag/yuBJ-4iL5E/" class="ctag ctag-8 ctag-yuBJ-4iL5E" aria-label="">C++</a>
-                    
-                      <a href="https://Zoom-EobardThawne.github.io/tag/fq9aRpLUM/" class="ctag ctag-9 ctag-fq9aRpLUM" aria-label="">About Me</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/yuBJ-4iL5E/" class="ctag ctag-6 ctag-yuBJ-4iL5E" aria-label="">C++</a>
                     
                   </div>
                   <div class="clear"></div>
