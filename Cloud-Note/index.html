@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>【Gridea使用Tips】——使用Prism.js添加代码高亮 | 闲卧庭前远看帆</title>
+<title>Typora+PicGo+Girhub+坚果云创建云笔记 | 闲卧庭前远看帆</title>
 <meta name="description" content="欲买桂花同载酒，终不似，少年游！" />
 <link rel="shortcut icon" href="https://Zoom-EobardThawne.github.io/favicon.ico">
 <link rel="stylesheet" href="https://Zoom-EobardThawne.github.io/styles/main.css">
@@ -15,9 +15,19 @@
 <script src="https://Zoom-EobardThawne.github.io/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://Zoom-EobardThawne.github.io/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <meta name="description" content="『Breek』主题默认的cpp格式代码是不会显示高亮的，为了让渲染后的页面显示代码高亮，我们需要用到
-Prism 。官网下载地址Prism 是一款轻量、可扩展的代码语法高亮库，使用现代化的 Web 标准构建。通过使用它，我们就可以在页面上显..." />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="介绍如何搭建一个自己的MarkDown云笔记
+
+
+创建图床（以GitHub为例）
+
+1. 注册并登录GitHub账号，点击新建一个公共的仓库
+2. 在账户设置中，获取一个TOKEN,保存好生成的TOKEN备用
+
+
+安装PicGo
+
+1. 安..." />
+    <meta name="keywords" content="教程" />
     <script src="https://Zoom-EobardThawne.github.io/media/js/waterfall.min.js"></script>
     <script src="https://Zoom-EobardThawne.github.io/media/js/prism.min.js"></script>
 	<script src="https://Zoom-EobardThawne.github.io/media/js/prism.js" ></script>
@@ -104,23 +114,23 @@ Prism 。官网下载地址Prism 是一款轻量、可扩展的代码语法高�
       <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
 
         <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071704535.jpg');">
+          <div class="featured-image cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071750805.JPG');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2021-11-05"><i class="fa fa-calendar"></i><span class="lately">2021-11-05</span></time>
+              <time class="meta-info" style="float:left;" datetime="2021-11-07"><i class="fa fa-calendar"></i><span class="lately">2021-11-07</span></time>
               
-              <a href="https://Zoom-EobardThawne.github.io/grideaTips-3/#comments" class="comments meta-info" title="">
-                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/grideaTips-3/"> </span>
+              <a href="https://Zoom-EobardThawne.github.io/Cloud-Note/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/Cloud-Note/"> </span>
               </a>
-              <span id="/grideaTips-3/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              <span id="/Cloud-Note/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
               
             </div>
             <div class="info">
               <div class="tags ">
                 
-                      <a href="https://Zoom-EobardThawne.github.io/tag/-XM3VOvuN/" class="ctag ctag-0 ctag--XM3VOvuN" aria-label="">Gridea</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/IzCm7yaNU/" class="ctag ctag-0 ctag-IzCm7yaNU" aria-label="">教程</a>
                     
               </div>
-              <h1 class="title ularge white bold">【Gridea使用Tips】——使用Prism.js添加代码高亮</h1>
+              <h1 class="title ularge white bold">Typora+PicGo+Girhub+坚果云创建云笔记</h1>
             </div>
           </div>
         </div>  
@@ -130,21 +140,114 @@ Prism 。官网下载地址Prism 是一款轻量、可扩展的代码语法高�
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <p>『Breek』主题默认的cpp格式代码是不会显示高亮的，为了让渲染后的页面显示代码高亮，我们需要用到<br>
-Prism 。<a href="http://prismjs.com/download.html">官网下载地址</a>Prism 是一款轻量、可扩展的代码语法高亮库，使用现代化的 Web 标准构建。通过使用它，我们就可以在页面上显示代码语法高亮。</p>
+                  <p>介绍如何搭建一个自己的MarkDown云笔记</p>
 <!-- more -->
-<p>Before：<img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071653362.png" alt="1636046603521" loading="lazy"><br>
-After：<img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071654155.png" alt="1636046939729" loading="lazy"></p>
-<h2 id="step1下载prismjs和prismcss">Step1：下载Prism.js和Prism.css</h2>
-<p><em><strong>进入官网之后，点击右侧的主题选项，根据下方的示例挑选自己想要的代码主题。确定想要的主题后，点击“Download”进入下载界面。</strong></em></p>
-<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071652067.png" alt="1636045296002" loading="lazy"></figure>
-<p><em><strong>选择刚刚确定的主题，选择需要用到的语言类型，根据需要选择插件（可不选）。点击下载Prism.js和Prism.css</strong></em></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071654724.png" alt="1636045592554" loading="lazy"><br>
-<img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071654006.png" alt="1636045600854" loading="lazy"></p>
-<h2 id="step2安放文件到js文件夹">Step2：安放文件到js文件夹</h2>
-<p><em><strong>将刚刚下载的两个文件安放到“站点文件夹\themes\breek\assets\media\js”，打开“站点文件夹\themes\breek\templates”路径下的“post.ejs”文件。将“Prism.js”的存放路径写入“post.ejs”中。</strong></em><br>
-<img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071655775.png" alt="1636046390425" loading="lazy"><br>
-<em><strong>保存文件，重现渲染页面，就可以让代码高亮显示了。</strong></em></p>
+<p><ul class="markdownIt-TOC">
+<li><a href="#%E5%88%9B%E5%BB%BA%E5%9B%BE%E5%BA%8A%E4%BB%A5github%E4%B8%BA%E4%BE%8B">创建图床（以GitHub为例）</a>
+<ul>
+<li><a href="#1-%E6%B3%A8%E5%86%8C%E5%B9%B6%E7%99%BB%E5%BD%95github%E8%B4%A6%E5%8F%B7%E7%82%B9%E5%87%BB%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E7%9A%84%E4%BB%93%E5%BA%93">1. 注册并登录GitHub账号，点击新建一个<strong>公共</strong>的仓库</a></li>
+<li><a href="#2-%E5%9C%A8%E8%B4%A6%E6%88%B7%E8%AE%BE%E7%BD%AE%E4%B8%AD%E8%8E%B7%E5%8F%96%E4%B8%80%E4%B8%AAtoken%E4%BF%9D%E5%AD%98%E5%A5%BD%E7%94%9F%E6%88%90%E7%9A%84token%E5%A4%87%E7%94%A8">2. 在账户设置中，获取一个TOKEN,保存好生成的TOKEN备用</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85picgo">安装PicGo</a>
+<ul>
+<li><a href="#1-%E5%AE%89%E8%A3%85nodejs%E7%89%88%E6%9C%AC%E5%A4%A7%E4%BA%8E8">1. 安装Node.js(版本大于8)</a></li>
+<li><a href="#2%E5%AE%89%E8%A3%85picgo">2.安装PicGo</a></li>
+<li><a href="#3-%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A%E6%B7%BB%E5%8A%A0%E6%8F%92%E4%BB%B6">3. 配置图床，添加插件</a></li>
+<li><a href="#%E8%B8%A9%E5%9D%91">踩坑</a>
+<ul>
+<li><a href="#1picgo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%A4%B1%E8%B4%A5">1.PicGo上传图片失败</a></li>
+<li><a href="#2picgo%E7%9A%84%E7%9B%B8%E5%86%8C%E6%98%BE%E7%A4%BA%E5%BC%82%E5%B8%B8">2.PicGo的相册显示异常</a></li>
+<li><a href="#3server%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5">3.Server端口占用导致失败</a></li>
+<li><a href="#4%E5%9C%A8picgo%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6%E5%A7%8B%E7%BB%88%E6%98%BE%E7%A4%BA%E5%AE%89%E8%A3%85%E4%B8%AD">4.在PicGo在线安装插件始终显示安装中</a></li>
+<li><a href="#5%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%BA%93%E7%9A%84%E5%9B%BE%E7%89%87">5.无法同步删除远程库的图片</a></li>
+<li><a href="#6%E6%8F%92%E5%85%A5%E5%9B%BE%E5%BA%8A%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E7%BC%93%E6%85%A2">6.插入图床图片，显示缓慢</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85typora">安装Typora</a></li>
+<li><a href="#typora%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0">Typora中设置插入图片自动上传</a></li>
+<li><a href="#%E5%9D%9A%E6%9E%9C%E4%BA%91%E7%BD%91%E7%9B%98%E4%BA%91%E5%90%8C%E6%AD%A5">坚果云网盘云同步</a></li>
+</ul>
+</p>
+<h1 id="创建图床以github为例">创建图床（以GitHub为例）</h1>
+<h2 id="1-注册并登录github账号点击新建一个公共的仓库">1. 注册并登录GitHub账号，点击新建一个<strong>公共</strong>的仓库</h2>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071525390.png" alt="新建仓库" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071526997.png" alt="设置仓库" loading="lazy"></figure>
+<h2 id="2-在账户设置中获取一个token保存好生成的token备用">2. 在账户设置中，获取一个TOKEN,保存好生成的TOKEN备用</h2>
+<p><em><strong>注意Token只在第一次创建后显示，刷新页面就消失，要即使保存</strong></em></p>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071527813.png" alt="点击设置" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071528758.png" alt="开发者设置" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071529209.png" alt="创建token" loading="lazy"></figure>
+<h1 id="安装picgo">安装PicGo</h1>
+<blockquote>
+<p>PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具。基于electron-vue开发，支持macOS,Windows,Linux。支持的图床多样，支持自定义插件。</p>
+<blockquote>
+<p>七牛图床 v1.0<br> 腾讯云 COS v4\v5 版本 v1.1 &amp; v1.5.0<br>又拍云 v1.2.0<br> GitHub v1.5.0<br>SM.MS V2 v2.3.0-beta.0<br>阿里云 OSS v1.6.0Imgur v1.6.0<br></p>
+</blockquote>
+</blockquote>
+<h2 id="1-安装nodejs版本大于8">1. 安装Node.js(版本大于8)</h2>
+<p><em>如已经确认环境符合要求，跳过此步骤</em><br>
+确认node版本，下载安装：</p>
+<blockquote>
+<p>windows环境下为例：按下“win+R”打开“运行”，输入“cmd”打开命令行，输入<code>node -v</code><br>
+如果显示版本号如：<code>v14.15.3</code><br>
+则说明系统已经有了node，否则请安装Node.js。<br>
+<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html">Node.js安装教程</a></p>
+</blockquote>
+<h2 id="2安装picgo">2.安装PicGo</h2>
+<blockquote>
+<p><a href="https://github.com/Molunerfinn/PicGo/">PicGo下载</a><br>
+<a href="https://picgo.github.io/PicGo-Doc/zh/guide/">官方说明文档</a></p>
+</blockquote>
+<p>参考以上网站，进行PicGo的安装配置。</p>
+<h2 id="3-配置图床添加插件">3. 配置图床，添加插件</h2>
+<p>以GitHub图床配置为例</p>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071533713.png" alt="GitHub图床设置" loading="lazy"></figure>
+<p>添加插件<br>
+这里建议添加Github-plus，它可以帮助你同步删除本地相册和远程仓库的图片</p>
+<figure data-type="image" tabindex="7"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071534564.png" alt="插件设置" loading="lazy"></figure>
+<h2 id="踩坑">踩坑</h2>
+<h3 id="1picgo上传图片失败">1.PicGo上传图片失败</h3>
+<p>由于GitHub是国外的平台，国内对外网访问有限制，所以经常由于网络原因导致上传出错。同理，在GitHub图床的图片，在笔记打开是可能出现加载缓慢或出错的情况。如果介意这点，请选择国内的图床（Gitee对大于1M的图片外链访问有限制，需要登录账号）。</p>
+<h3 id="2picgo的相册显示异常">2.PicGo的相册显示异常</h3>
+<p>本人遇到两种情况：一是上传成功，远程仓库有图片，相册有图片但无法预览；二是仓库上传成功，但仓库没有该图片。<br>
+出现这种原因多种，尤其注意上传的图片文件名不要包含特殊字符，保险起见一律采用纯英文和数字，或在PicGo中设置“上传时时间戳重命名”。</p>
+<figure data-type="image" tabindex="8"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071533749.png" alt="PicGo设置" loading="lazy"></figure>
+<h3 id="3server端口占用导致失败">3.Server端口占用导致失败</h3>
+<p>请在设置中使用推荐的默认端口，否则极容易上传失败。</p>
+<h3 id="4在picgo在线安装插件始终显示安装中">4.在PicGo在线安装插件始终显示安装中</h3>
+<p>重启软件，在设置中更换插件的镜像源 https://registry.npm.taobao.org</p>
+<figure data-type="image" tabindex="9"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071537749.png" alt="更改镜像" loading="lazy"></figure>
+<p>或者打开命令行 输入命令<br>
+<code>npm config set registry https://registry.npm.taobao.org</code></p>
+<h3 id="5无法同步删除远程库的图片">5.无法同步删除远程库的图片</h3>
+<p>正确安装，github-plus插件，确认相关配置信息填写是否正确<br>
+记得设置插件后，把github-plus设置为默认</p>
+<h3 id="6插入图床图片显示缓慢">6.插入图床图片，显示缓慢</h3>
+<p>这是因为github访问缓慢，我们可以在图床的配置中填入自定义域名，这里采用的时jsdliver的加速域名，能帮助我们更快加载GitHub图床图片。<br>
+<code>https://cdn.jsdelivr.net/gh/用户名/仓库名</code></p>
+<h1 id="安装typora">安装Typora</h1>
+<p>Typora是一款轻量级的PC端MarkDown写作工具，支持自定义主题。不同于其他主流的MarkDown编辑器采用代码模式和渲染效果分屏显示，Typora采用即时渲染，做到了“所见即所得”。此外，专注模式/打字机模式、大纲、文件树等功能也更加便于编写和查看。</p>
+<blockquote>
+<p><a href="https://typora.io/">下载地址</a><br>
+<a href="https://theme.typora.io/">主题下载</a></p>
+</blockquote>
+<h1 id="typora中设置插入图片自动上传">Typora中设置插入图片自动上传</h1>
+<p>打开Typora偏好设置，点击图像，选择插入图像自动上传，勾选应用到本地和网络图片。上传服务选择PicGo(app)，填写PicGo安装路径。<br>
+完成后，打开PicGo，点击验证设置，查看是否能够成功上传。</p>
+<figure data-type="image" tabindex="10"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071538594.png" alt="设置插入上传" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071538954.png" alt="验证上传设置" loading="lazy"></figure>
+<p>到此，所有的工作完成。在用Typora编写MarkDown的时候，插入图片都会自动上传保存，即使移动和分享文档也能够加载图片。</p>
+<h1 id="坚果云网盘云同步">坚果云网盘云同步</h1>
+<p>最后为了能够在各个设备随时查看笔记，使用网盘对文件进行同步。<br>
+这里选择的是<a href="https://www.jianguoyun.com/">坚果云</a>，它支持自动同步文件夹、支持MarkDown、上传下载不限速，每月有流量限制，但对于编写MarkDown来说足够了，图片用图床保存，文件本体很小。</p>
+<hr>
+<p>参考资料：<br>
+<a href="https://www.jianshu.com/p/ea1eb11db63f">MarkDown图床——by:高鸿祥</a><br>
+<a href="https://www.cnblogs.com/ly-2019/p/11828790.html">使用GiHub搭建图床</a><br>
+<a href="https://picgo.github.io/PicGo-Doc/zh/guide/">PicGo说明文档</a></p>
 
                 </div>
                 <div class="clear"></div>
@@ -154,26 +257,13 @@ After：<img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/2021
 
             <section class="related section">
               
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071750805.JPG');"></div>
-                 <a href="https://Zoom-EobardThawne.github.io/Cloud-Note/" class="full-link"></a>
-                 <div class="info">
-                  <time datetime="2021-11-05">2021-11-05</time>
-                  <h4 class="title white no-margin">Typora+PicGo+Girhub+坚果云创建云笔记</h4>
-                </div>
-                 <span class="epcl-button red">
-                  <img src="https://Zoom-EobardThawne.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
-                </span>
-                <div class="overlay"></div>
-              </article>
-              
               
               <article class="next grid-50 tablet-grid-50 grid-parent">
                 <div class="thumb cover lazy loaded" style="background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071704535.jpg');"></div>
-                 <a href="https://Zoom-EobardThawne.github.io/grideaTips-2/" class="full-link"></a>
+                 <a href="https://Zoom-EobardThawne.github.io/grideaTips-3/" class="full-link"></a>
                  <div class="info">
-                  <time datetime="2021-11-04">2021-11-04</time>
-                  <h4 class="title white no-margin">【Gridea使用Tips】『Breek』主题的评论和时间显示异常</h4>
+                  <time datetime="2021-11-05">2021-11-05</time>
+                  <h4 class="title white no-margin">【Gridea使用Tips】——使用Prism.js添加代码高亮</h4>
                 </div>
                  <span class="epcl-button red">
                   <img src="https://Zoom-EobardThawne.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">

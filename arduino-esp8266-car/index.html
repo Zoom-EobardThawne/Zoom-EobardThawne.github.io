@@ -18,9 +18,12 @@
     <meta name="description" content="简单介绍如何利用Arduino单片和ESP8266开发板，结合物联网云平台，制作一款能远程遥控的小车。
 KeyWords：单片机控制、WiFi、远程遥控、手机App
 
+
 Arduino+ESP8266的远程控制小车
+
 硬件选型
-小车主控板：Ar..." />
+
+小车主控板..." />
     <meta name="keywords" content="Arduino" />
     <script src="https://Zoom-EobardThawne.github.io/media/js/waterfall.min.js"></script>
     <script src="https://Zoom-EobardThawne.github.io/media/js/prism.min.js"></script>
@@ -95,7 +98,7 @@ Arduino+ESP8266的远程控制小车
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1636123809992" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1636280538154" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -108,7 +111,7 @@ Arduino+ESP8266的远程控制小车
       <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
 
         <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://Zoom-EobardThawne.github.io/post-images/arduino-esp8266-car.jpg');">
+          <div class="featured-image cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071703048.jpg');">
             <div class="meta top"> 
               <time class="meta-info" style="float:left;" datetime="2021-06-10"><i class="fa fa-calendar"></i><span class="lately">2021-06-10</span></time>
               
@@ -137,24 +140,51 @@ Arduino+ESP8266的远程控制小车
                   <p><u><em>简单介绍如何利用Arduino单片和ESP8266开发板，结合物联网云平台，制作一款能远程遥控的小车。<br>
 KeyWords：单片机控制、WiFi、远程遥控、手机App</em></u></p>
 <!-- more -->
+<p><ul class="markdownIt-TOC">
+<li><a href="#arduinoesp8266%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%B0%8F%E8%BD%A6">Arduino+ESP8266的远程控制小车</a>
+<ul>
+<li><a href="#%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B">硬件选型</a>
+<ul>
+<li><a href="#%E5%B0%8F%E8%BD%A6%E4%B8%BB%E6%8E%A7%E6%9D%BFarduino-uno">小车主控板：Arduino UNO</a></li>
+<li><a href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%A8%A1%E5%9D%97esp8266%E5%BC%80%E5%8F%91%E6%9D%BF">远程连接模块：ESP8266开发板</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96%E9%85%8D%E4%BB%B6">其他配件</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%91%E5%B9%B3%E5%8F%B0%E9%80%89%E6%8B%A9%E7%82%B9%E7%81%AF%E7%A7%91%E6%8A%80blinker">云平台选择——点灯科技（Blinker）</a></li>
+<li><a href="#%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AE%BE%E8%AE%A1">远程控制设计</a>
+<ul>
+<li><a href="#%E5%B0%8F%E8%BD%A6%E6%8E%A7%E5%88%B6">小车控制</a></li>
+<li><a href="#%E4%BA%91%E5%B9%B3%E5%8F%B0%E8%BF%9E%E6%8E%A5">云平台连接</a></li>
+</ul>
+</li>
+<li><a href="#%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</a>
+<ul>
+<li><a href="#%E5%B0%8F%E8%BD%A6%E6%8E%A7%E5%88%B6%E9%83%A8%E5%88%86">小车控制部分</a></li>
+<li><a href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E9%83%A8%E5%88%86%E7%83%A7%E5%88%B6%E5%9C%A8esp-12e%E5%BC%80%E5%8F%91%E6%9D%BF">远程连接部分（烧制在ESP-12E开发板）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
 <h1 id="arduinoesp8266的远程控制小车">Arduino+ESP8266的远程控制小车</h1>
 <h2 id="硬件选型">硬件选型</h2>
 <h3 id="小车主控板arduino-uno">小车主控板：Arduino UNO</h3>
 <p>​		Aruduino平台于2005年诞生，两位就职于米兰设计学院的教授，希望开发一款具有软件开发功能的开源的硬件实验平台，于是在他们的合作下，Arduino应运而生。Arduino的编程的语言脱胎于C，如果你有了C语言的学习经验的话，在了解了基本的语言特点和语法之后，便能够非常快速的在Arduino上进行独立的开发工作。关于Arduino的语言，主要有一下两部分，其一是setup()函数，该函数的作用只要在于对系统进行初始化，对相应的引脚进行定义，比如设置输入还是输出模式。第二部分是loop()函数，该函数是用来编写对应的功能的，同时loop()函数将启动硬件部分。不仅如此，Arduino拥有丰富的库文件，分为：官方提供和开发者自定义两种类型。</p>
 <p>​		正如上文提到的，Arduino同时兼具软件开发的功能，拥有着自己的软件开发环境——Arduino IDE。它最为显著的特点就是可以跨多个平台运行，极大方便了使用。目前支持的平台包括：Linux、Windows和MacOS等。Arduino IDE是针对Arduino开发板的一个集成开源的编译软件，操作界面简单、语言风格与C语言相近、使用的库文件是开源的并且简单的代码可以直接通过串口进行下载。对于使用Arduino的开发者来说，这是一款首选的开发环境。<br>
-<img src="https://Zoom-EobardThawne.github.io/post-images/1623321259204.png" alt="" loading="lazy"></p>
+<img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071605373.png" alt="ArduinoIDE" loading="lazy"></p>
 <p>​		ArduinoIDE是基于processing IDE开发的，是初学者十分的友好，能够快速的掌握，并具有很高的灵活性。Arduino的语言对于avr-gcc库二次封装，因而不需要太多的单片机和编程基础，便可以进行快速的开发。它的工作流程为，在开发者编写好代码，编译后，将语言转换成C++，再用avr-gcc将编译语言转换成二进制，这样一来，开发者编写的内容才能够背Arduino的硬件识别，程序才能够运行。这串代码通过USB接口连接到电脑，再上传到Arduino的存储器进行存储。</p>
 <p>​		在开发者使用Arduino IDE的时候，要做好以下的准备工作：在PC端下载对应硬件的驱动，选择合适的端口。这些步骤完成之后，便可开始程序的编写。Arduino还有第三方的图形化编程软件，极大地降低了对开发者的编程能力的要求，只要能够符合逻辑的设计出功能，按照规定的方式设置对应的参数，便可以下载程序到硬件开发板进行使用。</p>
 <p><a href="https://www.arduino.cc/en/software">Arduino软件下载</a><br>
 <a href="https://www.arduino.cn/">Arduino中文社区</a></p>
 <p>​		小车选用的是Arduino UNO的开发板，搭载芯片为ATmega328p。</p>
-<figure data-type="image" tabindex="1"><img src="https://Zoom-EobardThawne.github.io/post-images/1623321351613.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071605635.png" alt="ArduinoUNO" loading="lazy"></figure>
 <p>​		同时为了方便对控制小车其他配件，选用了一块配套的功能转接板，如下所示：</p>
-<figure data-type="image" tabindex="2"><img src="https://Zoom-EobardThawne.github.io/post-images/1623321379499.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071606505.png" alt="功能转接板" loading="lazy"></figure>
 <p>​</p>
 <h3 id="远程连接模块esp8266开发板">远程连接模块：ESP8266开发板</h3>
 <p>小车采用ESP-12E开发板（NoteMCU）作为WIFI连接的模块，通过该块开发板连接物联网云平台，实现远程的控制实现。<br>
-<img src="https://Zoom-EobardThawne.github.io/post-images/1623321413473.jpg" alt="" loading="lazy"></p>
+<img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071610875.jpg" alt="EPS8266" loading="lazy"></p>
 <h3 id="其他配件">其他配件</h3>
 <p>小车还需要的配件包括：四个直流电机，底盘，车轮，螺丝（若干），铜柱（若干），电池盒，可充电电池。</p>
 <h2 id="云平台选择点灯科技blinker">云平台选择——点灯科技（Blinker）</h2>
@@ -563,7 +593,7 @@ void loop() {
             <section class="related section">
               
               <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://Zoom-EobardThawne.github.io/post-images/dc-guan-ying.jpg');"></div>
+                <div class="thumb cover lazy loaded" style="background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071703051.jpg');"></div>
                  <a href="https://Zoom-EobardThawne.github.io/dc-guan-ying/" class="full-link"></a>
                  <div class="info">
                   <time datetime="2021-06-10">2021-06-10</time>
@@ -577,7 +607,7 @@ void loop() {
               
               
               <article class="next grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://Zoom-EobardThawne.github.io/post-images/zi-ding-yi-zhan.JPG');"></div>
+                <div class="thumb cover lazy loaded" style="background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071704376.JPG');"></div>
                  <a href="https://Zoom-EobardThawne.github.io/zi-ding-yi-zhan/" class="full-link"></a>
                  <div class="info">
                   <time datetime="2021-05-14">2021-05-14</time>
@@ -632,8 +662,23 @@ jQuery(document).ready(function($){
                   
                   
                   <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://Zoom-EobardThawne.github.io/Cloud-Note/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071750805.JPG');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-11-07">2021-11-07</time>
+                      <h4 class="title usmall">
+                        <a href="https://Zoom-EobardThawne.github.io/Cloud-Note/">Typora+PicGo+Girhub+坚果云创建云笔记</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
                     <a href="https://Zoom-EobardThawne.github.io/grideaTips-3/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://zoom-eobardthawne.github.io/post-images/grideaTips-1.jpg');"></span>
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071704535.jpg');"></span>
                     </a>
                     <div class="info gradient-effect">
                       <time datetime="2021-11-05">2021-11-05</time>
@@ -646,9 +691,9 @@ jQuery(document).ready(function($){
                   
                   
                   
-                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
+                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
                     <a href="https://Zoom-EobardThawne.github.io/grideaTips-2/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://阿帆的小窝.top/post-images/grideaTips-1.jpg');"></span>
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071704535.jpg');"></span>
                     </a>
                     <div class="info gradient-effect">
                       <time datetime="2021-11-04">2021-11-04</time>
@@ -660,19 +705,6 @@ jQuery(document).ready(function($){
                   </article>
                   
                   
-                  
-                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://Zoom-EobardThawne.github.io/iDaily-app/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://Zoom-EobardThawne.github.io/post-images/iDaily-app.png');"></span>
-                    </a>
-                    <div class="info gradient-effect">
-                      <time datetime="2021-11-03">2021-11-03</time>
-                      <h4 class="title usmall">
-                        <a href="https://Zoom-EobardThawne.github.io/iDaily-app/">【每日科技】——app推荐</a>
-                      </h4>
-                    </div>
-                    <div class="clear"></div>
-                  </article>
                   
                   
                   
@@ -696,19 +728,21 @@ jQuery(document).ready(function($){
                   <h4 class="widget-title title white bordered">标签云</h4>
                   <div class="tagcloud">
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/-XM3VOvuN/" class="ctag ctag-0 ctag--XM3VOvuN" aria-label="">Gridea</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/IzCm7yaNU/" class="ctag ctag-0 ctag-IzCm7yaNU" aria-label="">教程</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/FqMqeaWtO/" class="ctag ctag-1 ctag-FqMqeaWtO" aria-label="">好物推荐</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/-XM3VOvuN/" class="ctag ctag-1 ctag--XM3VOvuN" aria-label="">Gridea</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/pqgxC5QPe/" class="ctag ctag-2 ctag-pqgxC5QPe" aria-label="">二次元</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/FqMqeaWtO/" class="ctag ctag-2 ctag-FqMqeaWtO" aria-label="">好物推荐</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/ZBAtEx3CiL/" class="ctag ctag-3 ctag-ZBAtEx3CiL" aria-label="">DC</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/pqgxC5QPe/" class="ctag ctag-3 ctag-pqgxC5QPe" aria-label="">二次元</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/d8e9zXDCE8/" class="ctag ctag-4 ctag-d8e9zXDCE8" aria-label="">Arduino</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/ZBAtEx3CiL/" class="ctag ctag-4 ctag-ZBAtEx3CiL" aria-label="">DC</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/C-FLr0EW0c/" class="ctag ctag-5 ctag-C-FLr0EW0c" aria-label="">数据结构</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/d8e9zXDCE8/" class="ctag ctag-5 ctag-d8e9zXDCE8" aria-label="">Arduino</a>
                     
-                      <a href="https://Zoom-EobardThawne.github.io/tag/yuBJ-4iL5E/" class="ctag ctag-6 ctag-yuBJ-4iL5E" aria-label="">C++</a>
+                      <a href="https://Zoom-EobardThawne.github.io/tag/C-FLr0EW0c/" class="ctag ctag-6 ctag-C-FLr0EW0c" aria-label="">数据结构</a>
+                    
+                      <a href="https://Zoom-EobardThawne.github.io/tag/yuBJ-4iL5E/" class="ctag ctag-7 ctag-yuBJ-4iL5E" aria-label="">C++</a>
                     
                   </div>
                   <div class="clear"></div>
@@ -750,7 +784,7 @@ jQuery(document).ready(function($){
           <a href="https://Zoom-EobardThawne.github.io"><img src="/media/images/gridea.png" alt=""></a>
         </div>
         <p class="published border-effect">
-          ©2019 共 9 篇文章
+          ©2019 共 10 篇文章
           <br/>
           Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
         </p>

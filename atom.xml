@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Zoom-EobardThawne.github.io</id>
     <title>闲卧庭前远看帆</title>
-    <updated>2021-11-05T15:11:34.292Z</updated>
+    <updated>2021-11-07T10:22:21.816Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Zoom-EobardThawne.github.io"/>
     <link rel="self" href="https://Zoom-EobardThawne.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://Zoom-EobardThawne.github.io/images/avatar.png</logo>
     <icon>https://Zoom-EobardThawne.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 闲卧庭前远看帆</rights>
+    <entry>
+        <title type="html"><![CDATA[Typora+PicGo+Girhub+坚果云创建云笔记]]></title>
+        <id>https://Zoom-EobardThawne.github.io/Cloud-Note/</id>
+        <link href="https://Zoom-EobardThawne.github.io/Cloud-Note/">
+        </link>
+        <updated>2021-11-07T09:09:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>介绍如何搭建一个自己的MarkDown云笔记</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>介绍如何搭建一个自己的MarkDown云笔记</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Gridea使用Tips】——使用Prism.js添加代码高亮]]></title>
         <id>https://Zoom-EobardThawne.github.io/grideaTips-3/</id>
