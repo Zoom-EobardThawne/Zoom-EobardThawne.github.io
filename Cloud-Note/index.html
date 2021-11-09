@@ -6,6 +6,9 @@
 <meta name="description" content="欲买桂花同载酒，终不似，少年游！" />
 <link rel="shortcut icon" href="https://Zoom-EobardThawne.github.io/favicon.ico">
 <link rel="stylesheet" href="https://Zoom-EobardThawne.github.io/styles/main.css">
+<!--引入图标库样式表-->
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
 
 <script src="https://Zoom-EobardThawne.github.io/media/js/jquery.min.js"></script>
 <script src="https://Zoom-EobardThawne.github.io/media/js/masonry.pkgd.min.js"></script>
@@ -17,16 +20,13 @@
     <meta name="referrer" content="never">
     <meta name="description" content="介绍如何搭建一个自己的MarkDown云笔记
 
-
+[toc]
 创建图床（以GitHub为例）
-
 1. 注册并登录GitHub账号，点击新建一个公共的仓库
+
+
 2. 在账户设置中，获取一个TOKEN,保存好生成的TOKEN备用
-
-
-安装PicGo
-
-1. 安..." />
+注意Token只在..." />
     <meta name="keywords" content="教程" />
     <script src="https://Zoom-EobardThawne.github.io/media/js/waterfall.min.js"></script>
     <script src="https://Zoom-EobardThawne.github.io/media/js/prism.min.js"></script>
@@ -101,7 +101,7 @@
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1636369128687" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1636472107850" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -142,35 +142,7 @@
                 <div class="text">
                   <p>介绍如何搭建一个自己的MarkDown云笔记</p>
 <!-- more -->
-<p><ul class="markdownIt-TOC">
-<li><a href="#%E5%88%9B%E5%BB%BA%E5%9B%BE%E5%BA%8A%E4%BB%A5github%E4%B8%BA%E4%BE%8B">创建图床（以GitHub为例）</a>
-<ul>
-<li><a href="#1-%E6%B3%A8%E5%86%8C%E5%B9%B6%E7%99%BB%E5%BD%95github%E8%B4%A6%E5%8F%B7%E7%82%B9%E5%87%BB%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E7%9A%84%E4%BB%93%E5%BA%93">1. 注册并登录GitHub账号，点击新建一个<strong>公共</strong>的仓库</a></li>
-<li><a href="#2-%E5%9C%A8%E8%B4%A6%E6%88%B7%E8%AE%BE%E7%BD%AE%E4%B8%AD%E8%8E%B7%E5%8F%96%E4%B8%80%E4%B8%AAtoken%E4%BF%9D%E5%AD%98%E5%A5%BD%E7%94%9F%E6%88%90%E7%9A%84token%E5%A4%87%E7%94%A8">2. 在账户设置中，获取一个TOKEN,保存好生成的TOKEN备用</a></li>
-</ul>
-</li>
-<li><a href="#%E5%AE%89%E8%A3%85picgo">安装PicGo</a>
-<ul>
-<li><a href="#1-%E5%AE%89%E8%A3%85nodejs%E7%89%88%E6%9C%AC%E5%A4%A7%E4%BA%8E8">1. 安装Node.js(版本大于8)</a></li>
-<li><a href="#2%E5%AE%89%E8%A3%85picgo">2.安装PicGo</a></li>
-<li><a href="#3-%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A%E6%B7%BB%E5%8A%A0%E6%8F%92%E4%BB%B6">3. 配置图床，添加插件</a></li>
-<li><a href="#%E8%B8%A9%E5%9D%91">踩坑</a>
-<ul>
-<li><a href="#1picgo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%A4%B1%E8%B4%A5">1.PicGo上传图片失败</a></li>
-<li><a href="#2picgo%E7%9A%84%E7%9B%B8%E5%86%8C%E6%98%BE%E7%A4%BA%E5%BC%82%E5%B8%B8">2.PicGo的相册显示异常</a></li>
-<li><a href="#3server%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E5%AF%BC%E8%87%B4%E5%A4%B1%E8%B4%A5">3.Server端口占用导致失败</a></li>
-<li><a href="#4%E5%9C%A8picgo%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6%E5%A7%8B%E7%BB%88%E6%98%BE%E7%A4%BA%E5%AE%89%E8%A3%85%E4%B8%AD">4.在PicGo在线安装插件始终显示安装中</a></li>
-<li><a href="#5%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%BA%93%E7%9A%84%E5%9B%BE%E7%89%87">5.无法同步删除远程库的图片</a></li>
-<li><a href="#6%E6%8F%92%E5%85%A5%E5%9B%BE%E5%BA%8A%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E7%BC%93%E6%85%A2">6.插入图床图片，显示缓慢</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%AE%89%E8%A3%85typora">安装Typora</a></li>
-<li><a href="#typora%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0">Typora中设置插入图片自动上传</a></li>
-<li><a href="#%E5%9D%9A%E6%9E%9C%E4%BA%91%E7%BD%91%E7%9B%98%E4%BA%91%E5%90%8C%E6%AD%A5">坚果云网盘云同步</a></li>
-</ul>
-</p>
+<p>[toc]</p>
 <h1 id="创建图床以github为例">创建图床（以GitHub为例）</h1>
 <h2 id="1-注册并登录github账号点击新建一个公共的仓库">1. 注册并登录GitHub账号，点击新建一个<strong>公共</strong>的仓库</h2>
 <figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/202111071525390.png" alt="新建仓库" loading="lazy"></figure>
@@ -408,20 +380,37 @@ jQuery(document).ready(function($){
                     <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://Zoom-EobardThawne.github.io/images/avatar.png);"></span></a>
                   </div>
                   <div class="info">
-                    <h4 class="title small author-name gradient-effect no-margin"><a href="">闲卧庭前远看帆</a></h4>
+                    <h4 class="title small author-name gradient-effect no-margin"><a href="./welcome/">闲卧庭前远看帆</a></h4>
                     <p class="founder">欲买桂花同载酒，终不似，少年游！</p>
                     <div class="social">
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
+					
+					<!--不用主题自带图标手动添加
+                     
+                        //
+                      //
+                        //
+                      //
+                        //
+                      //
+                        //
+                      //
+                        //
+                      //
+					 -->
+					<!--图标库不全放弃使用
+          <a href="https://github.com/Zoom-EobardThawne" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://weibo.com/u/6866755221" class="translate-effect" target="_blank"><i class="fa fa-weibo"></i></a>
+          <a href="mailto:bruce1808759299@163.com" class="translate-effect" target="_blank"><i class="fa fa-envelope-o"></i></a>
+          -->
+          <!--社交图标用图片代替-->
+          <a href="https://github.com/Zoom-EobardThawne" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/github.ico" height="16" width="16" /></a> <!--GitHub-->
+          <a href="https://gitee.com/Zoom_EobardThawne" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/gitee.ico" height="16" width="16"/></a> <!--Gitee-->
+          <a href="https://weibo.com/u/6866755221" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/weibo.ico" height="16" width="16" /></a> <!--微博-->
+          <a href="https://space.bilibili.com/147998660" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/bilibili.ico" height="16" width="16" /></a> <!--B站-->
+          <a href="https://www.zhihu.com/people/xian-wo-ting-qian-yuan-kan-fan" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/zhihu.ico" height="16" width="16" /></a>  <!--知乎-->
+          <a href="https://www.douban.com/people/249494028/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/douban.ico" height="16" width="16"/></a> <!--豆瓣-->
+          <a href="https://bruce1808759299.lofter.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Zoom-EobardThawne/MyPicGo/img/lofter.ico" height="16" width="16"/></a>   <!--乐乎-->
+
                     </div> 
                   </div>
                   <div class="clear"></div>
@@ -436,8 +425,13 @@ jQuery(document).ready(function($){
           <a href="https://Zoom-EobardThawne.github.io"><img src="/media/images/gridea.png" alt=""></a>
         </div>
         <p class="published border-effect">
-          ©2019 共 10 篇文章
+          Copyright © 2021 闲卧庭前远看帆 All Rights Reserved
           <br/>
+          共 10 篇文章 
+          <br/>
+		  除注明外，本站所有文章均采用 
+		  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank"> 「CC BY-NC」</a>发布
+		  <br/>
           Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
         </p>
         
@@ -458,7 +452,7 @@ jQuery(document).ready(function($){
         appKey: 'wuvcPoOr9LIsXB8Ky4kMFYXT',
         pageSize: 30,
         placeholder: '既然来了，那就留个痕迹吧~',
-        visitor: true // 阅读量统计
+        visitor: true 
     })
 </script>
     
