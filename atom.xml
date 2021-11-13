@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Zoom-EobardThawne.github.io</id>
     <title>闲卧庭前远看帆</title>
-    <updated>2021-11-13T11:34:52.572Z</updated>
+    <updated>2021-11-13T11:41:00.769Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Zoom-EobardThawne.github.io"/>
     <link rel="self" href="https://Zoom-EobardThawne.github.io/atom.xml"/>
@@ -27,11 +27,9 @@
         <link href="https://Zoom-EobardThawne.github.io/grideaTips-3/">
         </link>
         <updated>2021-11-04T17:25:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>『Breek』主题默认的cpp格式代码是不会显示高亮的，为了让渲染后的页面显示代码高亮，我们需要用到<br>
-Prism 。<a href="http://prismjs.com/download.html">官网下载地址</a>Prism 是一款轻量、可扩展的代码语法高亮库，使用现代化的 Web 标准构建。通过使用它，我们就可以在页面上显示代码语法高亮。</p>
+        <summary type="html"><![CDATA[<p>『Breek』主题默认的cpp格式代码是不会显示高亮的，为了让渲染后的页面显示代码高亮，我们需要用到Prism。Prism 是一款轻量、可扩展的代码语法高亮库，使用现代化的 Web 标准构建。通过使用它，我们就可以在页面上显示代码语法高亮。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>『Breek』主题默认的cpp格式代码是不会显示高亮的，为了让渲染后的页面显示代码高亮，我们需要用到<br>
-Prism 。<a href="http://prismjs.com/download.html">官网下载地址</a>Prism 是一款轻量、可扩展的代码语法高亮库，使用现代化的 Web 标准构建。通过使用它，我们就可以在页面上显示代码语法高亮。</p>
+        <content type="html"><![CDATA[<p>『Breek』主题默认的cpp格式代码是不会显示高亮的，为了让渲染后的页面显示代码高亮，我们需要用到Prism。Prism 是一款轻量、可扩展的代码语法高亮库，使用现代化的 Web 标准构建。通过使用它，我们就可以在页面上显示代码语法高亮。</p>
 ]]></content>
     </entry>
     <entry>
